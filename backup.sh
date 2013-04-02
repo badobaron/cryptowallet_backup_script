@@ -1,6 +1,13 @@
 #!/bin/bash
 ###################################################################
-## Config change these values to fit your configuration          ##
+## Crypto Wallet Backup Script                                   ##
+## sanchaz                                                       ##
+##                                                               ##
+## Donations                                                     ##
+## BTC: 188Jw9v7K4S8k33EsQWb1D7xdt4JDqhNY1                       ##
+## LTC: LNKrdfM5ABzjZPusbLgLDzhLZF1JMrfZdz                       ##
+###################################################################
+## Config. change these values to fit your configuration         ##
 ###################################################################
 #Use this script to routinely backup your wallets to different media
 #add cronjob (sudo if you leave the logs in /var/log/)

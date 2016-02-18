@@ -41,8 +41,11 @@ fi
 
 echo "$(date +%T-%d-%m-%Y) Wallet backup started" >> "$logFile";
 
+##check if it's a dir
 if [ -d "$walletDir" ]
 then
+	##foreach destination if it's a valid dir
+	##then copy from walletDir to destination i
 	for i in "${destination[@]}"
 	do
 		if [ -d $i ]
@@ -61,6 +64,7 @@ fi
 
 echo "$(date +%T-%d-%m-%Y) Copied $walletFile to $count of ${#destination[@]} specified destinations" >> "$logFile";
 
+##output success or not
 if [ "$count" == "${#destination[@]}" ]
 then
 	echo "$(date +%T-%d-%m-%Y) Wallet backup completed sucessfuly" >> "$logFile";
@@ -71,5 +75,7 @@ else
 	echo "$(date +%T-%d-%m-%Y) Wallet backup completed with errors" >> "$logFile";
 fi
 
+##keep a copy unzip of the latest logfile
+##gzip the log file for archiving
 cp "$logFile" "$currentLogFile";
 gzip "$logFile";
